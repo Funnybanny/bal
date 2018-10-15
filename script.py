@@ -15,11 +15,7 @@ def move(file, fro, to, to2):
     print(file + ' updated')
 
 def check(file, fro):
-    bool = False
-    for x in os.listdir(config['Folder']['CTM']):
-        if x == file:
-                bool = True
-    if os.path.getmtime(fro + file) > os.path.getmtime(config['Folder']['CTM'] +"/"+file) or bool:
+    if os.path.getmtime(fro + file) > os.path.getmtime(config['Folder']['CTM'] +"/"+file) or os.path.exists(config['Folder']['CTM'] +"/"+file) == False:
         return True
     else:
         return False
