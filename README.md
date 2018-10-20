@@ -11,7 +11,7 @@ Simply change paths in config.ini along with the files extension then simply run
 
 
 
-Simple Python Script for coppying files. This was specificly made for OmegaT (http://omegat.org/).
+Simple Python Script for copying files. This was specificly made for OmegaT (http://omegat.org/).
 The script compares given file type in project and CTM folder. If file in project folder has been modified since last modified of file in CTM folder with same name the script updates file in CTM folder (and also does it in Auto folder). If copy of file doesnt exists in CTM makes a copy of it (and also does it in Auto folder).
 Open Config.ini to change paths to project folders.
 
