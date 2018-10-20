@@ -12,13 +12,18 @@ def init():
 def move(file, fro, to, to2):
     shutil.copy(fro + file, to)
     shutil.copy(fro + file, to2)
-    print(file + ' updated')
 
 def check(file, fro):
-    if os.path.getmtime(fro + file) > os.path.getmtime(config['Folder']['CTM'] +"/"+file) or os.path.exists(config['Folder']['CTM'] +"/"+file) == False:
-        return True
+    if os.path.exists(config['Folder']['CTM'] +"/"+file):
+        if os.path.getmtime(fro + file) > os.path.getmtime(config['Folder']['CTM'] +"/"+file):
+            print(file + ' updated.')
+            return True
+        else:
+            print(file+ ' no changes.')
+            return False
     else:
-        return False
+        print(file+' copied to CTM.')
+        return True
 
 def main():
     init()
@@ -31,8 +36,7 @@ def main():
 
             for y in os.listdir(config['Folder']['Project']+"/"+x):
 
-
-                if y.endswith('.txm'):
+                if y.endswith(config['Extension']['primary']):
                     if check(y, config['Folder']['Project'] + "/" + x + "/"):
                         move(y, config['Folder']['Project'] + "/" + x + "/", config['Folder']['CTM'],
                          config['Folder']['Auto'])
