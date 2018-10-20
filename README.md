@@ -5,6 +5,7 @@ It was done by Pyinstaller (https://www.pyinstaller.org/) using 'pyinstaller --o
 To run:
 
 Dist folder holds .exe and config.ini file. 
+Simply change paths in config.ini along with the files extension then simply run .exe
 
 -----------------------------------------------------
 
