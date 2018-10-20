@@ -1,3 +1,6 @@
+#Useful tool for updating your main TM folder from your projects
+
+
 Installation:
 
 It was done by Pyinstaller (https://www.pyinstaller.org/) using 'pyinstaller --onefile script.py'.
