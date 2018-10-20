@@ -19,7 +19,7 @@ Open Config.ini to change paths to project folders.
 
 project= where you keep your projects
 
-CTM and Auto is for OmegaT folders
+CTM and Auto are for OmegaT folders
 
 [Extension]
 
